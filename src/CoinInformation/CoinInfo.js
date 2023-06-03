@@ -12,7 +12,8 @@ import SelectButton from "../components/SelectButton";
 import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
 import { Chart } from "chart.js/auto";
-import parse from "html-react-parser";
+// eslint-disable-next-line react-hooks/exhaustive-deps
+import ReactHtmlParser from "react-html-parser";
 import ReactLoading from "react-loading";
 
 const CoinInfo = ({ coin }) => {
@@ -134,18 +135,18 @@ const CoinInfo = ({ coin }) => {
         <u style={{fontFamily:"Times New Roman",fontSize:"180%", color:"#f9f700ff"}} >Good to Know:</u>
        <div ><Typography variant="subtitle1" className={classes.description} style={{color:"white",fontFamily:"Times New Roman",fontSize:"130%"}}>
          <ul>
-           <li><p>{parse(coin?.description.en.split(". ")[0])}.
-           {parse(coin?.description.en.split(". ")[1])}.</p></li>
+           <li><p>{ReactHtmlParser(coin?.description.en.split(". ")[0])}.
+           {ReactHtmlParser(coin?.description.en.split(". ")[1])}.</p></li>
 
-           <li><p>{parse(coin?.description.en.split(". ")[2])}.
-           {parse(coin?.description.en.split(". ")[3])}.</p></li>
+           <li><p>{ReactHtmlParser(coin?.description.en.split(". ")[2])}.
+           {ReactHtmlParser(coin?.description.en.split(". ")[3])}.</p></li>
 
-           <li><p>{parse(coin?.description.en.split(". ")[4])}.
-           {parse(coin?.description.en.split(". ")[5])}.</p></li>
+           <li><p>{ReactHtmlParser(coin?.description.en.split(". ")[4])}.
+           {ReactHtmlParser(coin?.description.en.split(". ")[5])}.</p></li>
 
-           <li><p>{parse(coin?.description.en.split(". ")[6])}.
-           {/* {parse(coin?.description.en.split(". ")[7])}.
-           {parse(coin?.description.en.split(". ")[8])} */}
+           <li><p>{ReactHtmlParser(coin?.description.en.split(". ")[6])}.
+           {ReactHtmlParser(coin?.description.en.split(". ")[7])}.
+           {ReactHtmlParser(coin?.description.en.split(". ")[8])}
            </p></li>
           </ul>
           

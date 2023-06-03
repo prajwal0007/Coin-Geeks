@@ -46,11 +46,11 @@ const CoinPage = () => {
       // borderRight: "1px solid grey",
     },
     heading: {
-      fontWeight: "bolder",
+      fontWeight: "bold",
       marginBottom: 30,
       fontFamily: "Times New Roman",
       color:"white",
-      // fontSize:"110%",
+      // fontSize:"250%",
     },
     description: {
       width: "100%",
@@ -107,16 +107,16 @@ const CoinPage = () => {
     <div className={classes.container}>
       <div className={classes.sidebar}>
         
-        <Typography variant="h3" className={classes.heading} style={{fontFamily:"Algerian"}} >
+        <Typography variant="h3" className={classes.heading} style={{fontFamily:"Algerian",fontSize:"230%"}} >
         <img
           src={coin?.image.large}
           alt={coin?.name}
           height="60"
           style={{ marginBottom: -12,marginRight:20}}
         />
-        <i>
+        <i><u>
           {coin?.name}
-          </i>
+          </u></i>
         </Typography>
 
         <ul style={{ fontSize:"120%"}}>
