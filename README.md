@@ -1,3 +1,5 @@
+INTRODUCTION
+
 It's basically a REACT APP that uses COINGECKO API as its backbone.
 
 This application features basic information about a CRYPTOCURRENCY like Current Price, Rank, Market Cap, Volume etc...
